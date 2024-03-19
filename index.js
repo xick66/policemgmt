@@ -1,10 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors=require('cors')
 const CrimeRecord = require('./CrimeRecord.js'); // The model file
 
 const app = express();
 const port = 3000;
-
+app.use(cors());
 mongoose.connect('mongodb+srv://shardeum786:IdcsxQjM8z35VLLQ@cluster0.5ucbaht.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(express.json());
