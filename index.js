@@ -11,7 +11,7 @@ mongoose.connect('mongodb+srv://shardeum786:IdcsxQjM8z35VLLQ@cluster0.5ucbaht.mo
 app.use(express.json());
 
 // Route to insert data (You can call this after parsing your CSV to JSON)
-app.post('/insertCrimeRecords', async (req, res) => {
+app.post('/post', async (req, res) => {
     try {
         await CrimeRecord.insertMany(req.body);
         res.send('Data inserted successfully');
