@@ -19,6 +19,10 @@ app.post('/insertCrimeRecords', async (req, res) => {
     }
 });
 
+app.get('/',(req,res)=>{
+    res.send("hello I am up")
+})
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
